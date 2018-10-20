@@ -42,8 +42,8 @@
             this.AgregarTiposDeCuentasButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -97,6 +97,11 @@
             // 
             this.MontoNumericUpDown.DecimalPlaces = 2;
             this.MontoNumericUpDown.Location = new System.Drawing.Point(102, 125);
+            this.MontoNumericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.MontoNumericUpDown.Name = "MontoNumericUpDown";
             this.MontoNumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.MontoNumericUpDown.TabIndex = 29;
@@ -128,7 +133,7 @@
             // AgregarTiposDeCuentasButton
             // 
             this.AgregarTiposDeCuentasButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            
+            this.AgregarTiposDeCuentasButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_plus_square_black_243655;
             this.AgregarTiposDeCuentasButton.Location = new System.Drawing.Point(229, 95);
             this.AgregarTiposDeCuentasButton.Name = "AgregarTiposDeCuentasButton";
             this.AgregarTiposDeCuentasButton.Size = new System.Drawing.Size(29, 27);
@@ -138,7 +143,7 @@
             // 
             // EliminarButton
             // 
-            
+            this.EliminarButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_cross_24_103181;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.Location = new System.Drawing.Point(244, 161);
             this.EliminarButton.Name = "EliminarButton";
@@ -151,7 +156,7 @@
             // 
             // GuardarButton
             // 
-            
+            this.GuardarButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_floppy_disk_save_103863;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.Location = new System.Drawing.Point(128, 161);
             this.GuardarButton.Name = "GuardarButton";
@@ -162,9 +167,20 @@
             this.GuardarButton.UseVisualStyleBackColor = true;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_search_126577;
+            this.BuscarButton.Location = new System.Drawing.Point(244, 12);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(50, 47);
+            this.BuscarButton.TabIndex = 20;
+            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
+            // 
             // NuevoButton
             // 
-            
+            this.NuevoButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_new10_216291;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.Location = new System.Drawing.Point(12, 162);
             this.NuevoButton.Name = "NuevoButton";
@@ -175,18 +191,7 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
-            // BuscarButton
-            // 
-            
-            this.BuscarButton.Location = new System.Drawing.Point(244, 12);
-            this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(50, 47);
-            this.BuscarButton.TabIndex = 20;
-            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BuscarButton.UseVisualStyleBackColor = true;
-            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
-            // 
-            // CuentasRegistro
+            // RegistroDeCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +209,7 @@
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.BuscarButton);
-            this.Name = "CuentasRegistro";
+            this.Name = "RegistroDeCuentas";
             this.Text = "CuentasRegistro";
             ((System.ComponentModel.ISupportInitialize)(this.CuentaIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontoNumericUpDown)).EndInit();

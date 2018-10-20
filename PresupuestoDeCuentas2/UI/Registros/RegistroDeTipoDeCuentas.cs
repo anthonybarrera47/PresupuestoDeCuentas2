@@ -82,7 +82,7 @@ namespace PresupuestoDeCuentas2.UI.Registros
             if (paso)
             {
                 MessageBox.Show("Guardado!!", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                RegistroDeCuentas.pas = 1;
                 Limpiar();
             }
             else
@@ -124,6 +124,11 @@ namespace PresupuestoDeCuentas2.UI.Registros
             }
             else
                 MessageBox.Show("No se pudo eliminar El Tipo De Cuenta!!", "Fallo!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void RegistroDeTipoDeCuentas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

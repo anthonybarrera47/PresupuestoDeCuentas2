@@ -19,8 +19,7 @@ namespace PresupuestoDeCuentas2.UI.Registros
         public RegistroDeCuentas()
         {
             InitializeComponent();
-            if (pas == 1)
-                LlenarComboBox();
+            LlenarComboBox();
         }
         private void LlenarComboBox()
         {
@@ -51,7 +50,7 @@ namespace PresupuestoDeCuentas2.UI.Registros
 
             CuentaIDnumericUpDown.Value = cuentas.CuentasID;
             DescripciontextBox1.Text = cuentas.Descripcion;
-            TipoComboBox.SelectedIndex = cuentas.TipoID;
+            TipoComboBox.SelectedValue = cuentas.TipoID;
             MontoNumericUpDown.Value = Convert.ToDecimal(cuentas.Monto);
         }
 
@@ -90,7 +89,7 @@ namespace PresupuestoDeCuentas2.UI.Registros
             if (!GuardarValidar())
                 return;
 
-            if (CuentaIDnumericUpDown.Value >= 0)
+            if (CuentaIDnumericUpDown.Value == 0)
                 paso = repositorio.Guardar(cuenta);
             else
             {
@@ -146,8 +145,9 @@ namespace PresupuestoDeCuentas2.UI.Registros
 
         private void AgregarTiposDeCuentasButton_Click(object sender, EventArgs e)
         {
-            TipoCuentas tipoCuenta = new TipoCuentas();
-            //tipoCuenta.ShowDialog();
+            RegistroDeTipoDeCuentas tipoCuenta = new RegistroDeTipoDeCuentas();
+            tipoCuenta.ShowDialog();
+            LlenarComboBox();
         }
 
     }

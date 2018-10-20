@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PresupuestoDeCuentas2.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace PresupuestoDeCuentas2
         public VentanaPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroDeCuentas rg = new RegistroDeCuentas();
+            rg.ShowDialog();
         }
     }
 }

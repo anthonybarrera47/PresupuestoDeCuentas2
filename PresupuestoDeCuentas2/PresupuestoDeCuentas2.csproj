@@ -71,6 +71,12 @@
     <Compile Include="UI\Registros\RegistroDeTipoDeCuentas.Designer.cs">
       <DependentUpon>RegistroDeTipoDeCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\RegistroPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RegistroPresupuesto.Designer.cs">
+      <DependentUpon>RegistroPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +93,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Registros\RegistroDeCuentas.resx">
+      <DependentUpon>RegistroDeCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistroDeTipoDeCuentas.resx">
+      <DependentUpon>RegistroDeTipoDeCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistroPresupuesto.resx">
+      <DependentUpon>RegistroPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,9 +123,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\Scripts\" />
-    <Folder Include="Resources\" />
     <Folder Include="UI\Consultas\" />
     <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_cross-24_103181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_floppy_disk_save_103863.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_new10_216291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_plus_square_black_243655.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_search_126577.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

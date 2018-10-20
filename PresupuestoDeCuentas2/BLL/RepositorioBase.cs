@@ -1,6 +1,7 @@
 ﻿using PresupuestoDeCuentas2.DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -11,6 +12,10 @@ namespace PresupuestoDeCuentas2.BLL
     public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {
         internal Contexto _db;
+        public RepositorioBase()
+        {
+            _db = new Contexto();
+        }
         public T Buscar(int id)
         {
             T entity;
@@ -61,10 +66,15 @@ namespace PresupuestoDeCuentas2.BLL
         public bool Modificar(T entity)
         {
             bool paso = false;
+            _db = new Contexto();
             try
             {
-                _db.Entry(entity).State = System.Data.Entity.EntityState.Modified;
-                paso = _db.SaveChanges() > 0;
+                _db.Entry(entity).State = EntityState.Modified;
+                //paso = _db.SaveChanges() > 0;
+                if(_db.SaveChanges()>0)
+                {
+                    paso = true;
+                }
             }catch(Exception)
             { throw; }
             return paso;
