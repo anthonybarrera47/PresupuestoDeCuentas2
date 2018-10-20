@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PresupuestoDeCuentas2
 {
-    static class Program
+    static class PrincipalWindows
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace PresupuestoDeCuentas2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new VentanaPrincipal());
         }
     }
 }
