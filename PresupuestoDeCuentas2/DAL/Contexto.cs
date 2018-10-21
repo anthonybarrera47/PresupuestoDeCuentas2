@@ -13,6 +13,8 @@ namespace PresupuestoDeCuentas2.DAL
         public DbSet<Cuenta> Cuentas { get; set; }
         public DbSet<TipoCuentas> TipoCuentas { get; set; }
         public DbSet<Presupuesto> Presupuestos { get; set; }
+
+
         public Contexto() : base("ConStr")
         { }
     }

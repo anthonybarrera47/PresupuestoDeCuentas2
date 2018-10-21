@@ -1,4 +1,5 @@
 ﻿using PresupuestoDeCuentas2.DAL;
+using PresupuestoDeCuentas2.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -65,16 +66,19 @@ namespace PresupuestoDeCuentas2.BLL
 
         public bool Modificar(T entity)
         {
+            RepositorioBase<Presupuesto> repositorio = new RepositorioBase<Presupuesto>();
             bool paso = false;
+            
             _db = new Contexto();
             try
             {
-                _db.Entry(entity).State = EntityState.Modified;
+                /*_db.Entry(entity).State = EntityState.Modified;
                 //paso = _db.SaveChanges() > 0;
                 if(_db.SaveChanges()>0)
                 {
                     paso = true;
-                }
+                }*/
+
             }catch(Exception)
             { throw; }
             return paso;

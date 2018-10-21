@@ -30,10 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,11 +52,17 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarCuentaToolStripMenuItem,
-            this.pruebaToolStripMenuItem});
+            this.registrarCuentaToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.registroToolStripMenuItem.Text = "Registro";
+            // 
+            // registrarCuentaToolStripMenuItem
+            // 
+            this.registrarCuentaToolStripMenuItem.Name = "registrarCuentaToolStripMenuItem";
+            this.registrarCuentaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.registrarCuentaToolStripMenuItem.Text = "Registrar Cuenta";
+            this.registrarCuentaToolStripMenuItem.Click += new System.EventHandler(this.registrarCuentaToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -70,19 +75,6 @@
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // registrarCuentaToolStripMenuItem
-            // 
-            this.registrarCuentaToolStripMenuItem.Name = "registrarCuentaToolStripMenuItem";
-            this.registrarCuentaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.registrarCuentaToolStripMenuItem.Text = "Registrar Cuenta";
-            // 
-            // pruebaToolStripMenuItem
-            // 
-            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
-            this.pruebaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.pruebaToolStripMenuItem.Text = "Prueba";
-            this.pruebaToolStripMenuItem.Click += new System.EventHandler(this.pruebaToolStripMenuItem_Click);
             // 
             // VentanaPrincipal
             // 
@@ -108,7 +100,6 @@
         private System.Windows.Forms.ToolStripMenuItem registrarCuentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pruebaToolStripMenuItem;
     }
 }
 

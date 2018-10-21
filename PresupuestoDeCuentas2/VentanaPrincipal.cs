@@ -18,10 +18,13 @@ namespace PresupuestoDeCuentas2
             InitializeComponent();
         }
 
-        private void pruebaToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void registrarCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroDeCuentas rg = new RegistroDeCuentas();
-            rg.ShowDialog();
+            RegistroPresupuesto registroPresupuesto = new RegistroPresupuesto();
+            registroPresupuesto.MdiParent = this;
+            registroPresupuesto.Show();
         }
     }
 }

@@ -38,23 +38,23 @@
             this.CuentascomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddValor = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ValorTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MontosDataGridView = new System.Windows.Forms.DataGridView();
+            this.AgregarCuentaButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.AgregarCuentaButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TotalTextbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.RemoverFila = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PresupuestoIDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MontosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -134,14 +134,15 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Valor";
             // 
-            // button2
+            // AddValor
             // 
-            this.button2.Location = new System.Drawing.Point(346, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(29, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddValor.Location = new System.Drawing.Point(346, 38);
+            this.AddValor.Name = "AddValor";
+            this.AddValor.Size = new System.Drawing.Size(29, 23);
+            this.AddValor.TabIndex = 22;
+            this.AddValor.Text = "+";
+            this.AddValor.UseVisualStyleBackColor = true;
+            this.AddValor.Click += new System.EventHandler(this.AddValor_Click);
             // 
             // errorProvider
             // 
@@ -151,16 +152,15 @@
             // 
             this.ValorTextBox.Location = new System.Drawing.Point(219, 39);
             this.ValorTextBox.Name = "ValorTextBox";
-            this.ValorTextBox.ReadOnly = true;
             this.ValorTextBox.Size = new System.Drawing.Size(121, 22);
             this.ValorTextBox.TabIndex = 23;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.MontosDataGridView);
             this.groupBox1.Controls.Add(this.ValorTextBox);
             this.groupBox1.Controls.Add(this.CuentascomboBox);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.AddValor);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.AgregarCuentaButton);
@@ -170,6 +170,26 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar Cuentas";
+            // 
+            // MontosDataGridView
+            // 
+            this.MontosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MontosDataGridView.Location = new System.Drawing.Point(6, 69);
+            this.MontosDataGridView.Name = "MontosDataGridView";
+            this.MontosDataGridView.RowTemplate.Height = 24;
+            this.MontosDataGridView.Size = new System.Drawing.Size(418, 234);
+            this.MontosDataGridView.TabIndex = 24;
+            // 
+            // AgregarCuentaButton
+            // 
+            this.AgregarCuentaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AgregarCuentaButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_plus_square_black_243655;
+            this.AgregarCuentaButton.Location = new System.Drawing.Point(133, 38);
+            this.AgregarCuentaButton.Name = "AgregarCuentaButton";
+            this.AgregarCuentaButton.Size = new System.Drawing.Size(25, 23);
+            this.AgregarCuentaButton.TabIndex = 9;
+            this.AgregarCuentaButton.UseVisualStyleBackColor = true;
+            this.AgregarCuentaButton.Click += new System.EventHandler(this.AgregarCuentaButton_Click);
             // 
             // EliminarButton
             // 
@@ -182,6 +202,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -194,6 +215,7 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // NuevoButton
             // 
@@ -206,6 +228,7 @@
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // BuscarButton
             // 
@@ -216,25 +239,7 @@
             this.BuscarButton.TabIndex = 16;
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.UseVisualStyleBackColor = true;
-            // 
-            // AgregarCuentaButton
-            // 
-            this.AgregarCuentaButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.AgregarCuentaButton.Image = global::PresupuestoDeCuentas2.Properties.Resources.if_plus_square_black_243655;
-            this.AgregarCuentaButton.Location = new System.Drawing.Point(133, 38);
-            this.AgregarCuentaButton.Name = "AgregarCuentaButton";
-            this.AgregarCuentaButton.Size = new System.Drawing.Size(25, 23);
-            this.AgregarCuentaButton.TabIndex = 9;
-            this.AgregarCuentaButton.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(418, 234);
-            this.dataGridView1.TabIndex = 24;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // TotalTextbox
             // 
@@ -264,6 +269,7 @@
             this.RemoverFila.Text = "RemoverFila";
             this.RemoverFila.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RemoverFila.UseVisualStyleBackColor = true;
+            this.RemoverFila.Click += new System.EventHandler(this.RemoverFila_Click);
             // 
             // RegistroPresupuesto
             // 
@@ -290,7 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MontosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,13 +318,13 @@
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddValor;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.TextBox ValorTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button RemoverFila;
         private System.Windows.Forms.TextBox TotalTextbox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MontosDataGridView;
     }
 }
