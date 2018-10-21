@@ -14,6 +14,7 @@ namespace PresupuestoDeCuentas2.Entidades
         public int PresupuestoID { get; set; }
         public int CuentaID { get; set; }
         public Double Valor { get; set; }
+        public Double Total { get; set; }
 
         public PresupuestoDetalle()
         {
@@ -21,6 +22,7 @@ namespace PresupuestoDeCuentas2.Entidades
             PresupuestoID = 0;
             CuentaID = 0;
             Valor = 0;
+            Total = 0;
         }
 
         public PresupuestoDetalle(int PresupuestoDetalleID,int PresupuestoID,int CuentaID, Double Valor)
@@ -29,6 +31,7 @@ namespace PresupuestoDeCuentas2.Entidades
             this.PresupuestoID = PresupuestoID;
             this.CuentaID = CuentaID;
             this.Valor = Valor;
+           
         }
 
     }

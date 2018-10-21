@@ -33,6 +33,7 @@
             this.registrarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,12 +61,14 @@
             // registrarCuentaToolStripMenuItem
             // 
             this.registrarCuentaToolStripMenuItem.Name = "registrarCuentaToolStripMenuItem";
-            this.registrarCuentaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.registrarCuentaToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.registrarCuentaToolStripMenuItem.Text = "Registrar Cuenta";
             this.registrarCuentaToolStripMenuItem.Click += new System.EventHandler(this.registrarCuentaToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultasToolStripMenuItem1});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -75,6 +78,13 @@
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // consultasToolStripMenuItem1
+            // 
+            this.consultasToolStripMenuItem1.Name = "consultasToolStripMenuItem1";
+            this.consultasToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.consultasToolStripMenuItem1.Text = "Consultas";
+            this.consultasToolStripMenuItem1.Click += new System.EventHandler(this.consultasToolStripMenuItem1_Click);
             // 
             // VentanaPrincipal
             // 
@@ -100,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem registrarCuentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem1;
     }
 }
 

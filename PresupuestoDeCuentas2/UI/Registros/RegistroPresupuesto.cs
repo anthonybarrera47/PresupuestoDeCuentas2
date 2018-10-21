@@ -21,6 +21,7 @@ namespace PresupuestoDeCuentas2.UI.Registros
             InitializeComponent();
             this.Detalle = new List<PresupuestoDetalle>();
             LLenarComboBox();
+            
         }
 
         private void Limpiar()
@@ -167,6 +168,7 @@ namespace PresupuestoDeCuentas2.UI.Registros
                     PresupuestoID: (int)PresupuestoIDnumericUpDown.Value,
                     CuentaID: CuentascomboBox.SelectedIndex,
                     Valor: Convert.ToDouble(ValorTextBox.Text)
+               
                     )
                 );
             errorProvider.Clear();

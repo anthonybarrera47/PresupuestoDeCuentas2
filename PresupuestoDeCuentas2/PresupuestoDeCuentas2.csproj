@@ -32,15 +32,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +67,12 @@
     <Compile Include="Entidades\Presupuesto.cs" />
     <Compile Include="Entidades\PresupuestoDetalle.cs" />
     <Compile Include="Entidades\TipoCuentas.cs" />
+    <Compile Include="UI\Consultas\ConsultaDeCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaDeCuentas.Designer.cs">
+      <DependentUpon>ConsultaDeCuentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistroDeCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +90,18 @@
     </Compile>
     <Compile Include="UI\Registros\RegistroPresupuesto.Designer.cs">
       <DependentUpon>RegistroPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\Reporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\ReporteViewer.Designer.cs">
+      <DependentUpon>ReporteViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPrincipal.cs">
       <SubType>Form</SubType>
@@ -96,6 +121,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\ConsultaDeCuentas.resx">
+      <DependentUpon>ConsultaDeCuentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroDeCuentas.resx">
       <DependentUpon>RegistroDeCuentas.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +132,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroPresupuesto.resx">
       <DependentUpon>RegistroPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\Reporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ReporteViewer.resx">
+      <DependentUpon>ReporteViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
@@ -124,8 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\Scripts\" />
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_cross-24_103181.png" />
@@ -141,6 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\if_search_126577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_print_326675.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

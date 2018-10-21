@@ -1,4 +1,5 @@
-﻿using PresupuestoDeCuentas2.UI.Registros;
+﻿using PresupuestoDeCuentas2.UI.Consultas;
+using PresupuestoDeCuentas2.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,13 @@ namespace PresupuestoDeCuentas2
             RegistroPresupuesto registroPresupuesto = new RegistroPresupuesto();
             registroPresupuesto.MdiParent = this;
             registroPresupuesto.Show();
+        }
+
+        private void consultasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaDeCuentas consultaDeCuentas = new ConsultaDeCuentas();
+            consultaDeCuentas.MdiParent = this;
+            consultaDeCuentas.Show();
         }
     }
 }
